@@ -16,6 +16,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Encounter Checklist",
   description: "Checklist for encounter church service prep",
+  openGraph: {
+    title: "Encounter Checklist",
+    description: "Checklist for encounter church service prep",
+    // images: [
+    //   {
+    //     url: 'https://nextjs.org/og.png', // Must be an absolute URL
+    //     width: 800,
+    //     height: 600,
+    //   },
+    // ],
+  },
 };
 
 export default function RootLayout({
@@ -25,11 +36,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta property="og:title" content="Encounter Checklist" />
-        <meta property="og:description" content="Checklist for encounter church service prep" />
-        <meta property="og:image" content="public/pictures/this-is-home.webp" />
-      </Head>
       <body
         className={`
           ${geistSans.variable}

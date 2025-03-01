@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: Queensides;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("../public/QueensidesMedium-x30zV.ttf");
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Queensides;
+}
+
+@keyframes borderPulse {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4a5568; /* Replace with your desired border color */
+  }
+}
+
+.animate-border-pulse {
+  animation: borderPulse 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.letters-bounce {
+  display: inline-block;
+  animation: bounce 1s infinite;
+}

@@ -1,4 +1,4 @@
-export const SpeechBubble = ({ className, text }) => (
+export const SpeechBubble = ({ className, text }: { className: string; text: string }) => (
   <div className="flex flex-col items-center justify-center relative">
     <p className="text-2xl absolute -top-4 left-2 mx-10">{text}</p>
     <svg className={className} fill="#000000" height={200} width={200} viewBox="0 0 78.667 78.667">

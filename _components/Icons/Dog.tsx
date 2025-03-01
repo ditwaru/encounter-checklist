@@ -1,4 +1,4 @@
-export const Dog = ({ className }) => (
+export const Dog = ({ className }: { className: string }) => (
   <svg
     height={100}
     width={100}

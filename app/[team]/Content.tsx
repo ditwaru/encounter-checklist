@@ -137,7 +137,7 @@ export default function Content({ params }: Props) {
         <SpeechBubble text="See the need, sow the seed" className="transform -translate-y-16" />
       </div>
       <main className="flex flex-col gap-4">
-        {Object.keys(data).map((category, index) => {
+        {Object.keys(data).map((category) => {
           return (
             <div
               className={`border rounded-lg p-4 ${

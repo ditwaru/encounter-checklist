@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Encounter Checklist",
-  description: "Checklist for encounter church",
+  description: "Checklist for encounter church service prep",
 };
 
 export default function RootLayout({
@@ -24,6 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta property="og:title" content="Encounter Checklist" />
+        <meta property="og:description" content="Checklist for encounter church service prep" />
+        <meta property="og:image" content="public/pictures/this-is-home.webp" />
+      </Head>
       <body
         className={`
           ${geistSans.variable}

@@ -91,6 +91,7 @@ export default function Content({ params }: Props) {
       data: Object.values(data).flatMap((category) => category.tasks),
       team,
     };
+    setLoading(true);
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checklist`, {
       method: "PUT",
       body: JSON.stringify(dataToSend),
@@ -104,10 +105,12 @@ export default function Content({ params }: Props) {
       data: Object.values(data).flatMap((category) => category.tasks),
       team,
     };
+    setLoading(true);
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/reset`, {
       method: "POST",
       body: JSON.stringify(dataToSend),
     });
+    setAlreadySubmitted(false);
     fetchData();
   };
   if (loading) {

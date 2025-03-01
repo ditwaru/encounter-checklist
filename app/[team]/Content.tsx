@@ -86,6 +86,7 @@ export default function Content({ params }: Props) {
   };
 
   const handleSubmit = async () => {
+    if (alreadySubmitted) return;
     const dataToSend = {
       submittedBy: name,
       data: Object.values(data).flatMap((category) => category.tasks),

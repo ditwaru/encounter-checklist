@@ -31,10 +31,10 @@ export const Checkbox = ({ label, checked, onClick, disabled }: Props) => {
   return (
     <div
       onClick={onClick}
-      className={`flex items-center cursor-pointer w-fit select-none
+      className={`flex gap-2 items-center cursor-pointer w-fit select-none
     ${disabled && "pointer-events-none opacity-50"}`}
     >
-      {checked ? <Checked /> : <Unchecked />}
+      <div className="w-6">{checked ? <Checked /> : <Unchecked />}</div>
       <p>{label}</p>
     </div>
   );

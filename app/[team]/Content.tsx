@@ -133,12 +133,23 @@ export default function Content({ params }: Props) {
       </div>
     );
   }
+
+  const getSpeechBubbleText = () => {
+    if (team === "hospitality") {
+      return "What Lenny said";
+    }
+    if (team === "general") {
+      return "See the need, sow the seed";
+    }
+    return "howdy";
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-8">
+    <div className="flex flex-col items-center justify-center min-h-screen py-16 max-w-64 md:max-w-80 mx-auto">
       <h1 className="text-4xl font-bold mb-14 text-center w-full">Setup Checklist: {team}</h1>
       <div className="flex my-2">
         <Dog className="self-end" />
-        <SpeechBubble text="See the need, sow the seed" className="transform -translate-y-16" />
+        <SpeechBubble text={getSpeechBubbleText()} className="transform -translate-y-16" />
       </div>
       <main className="flex flex-col gap-4">
         {Object.keys(data).map((category) => {

@@ -1,6 +1,8 @@
 export const SpeechBubble = ({ className, text }: { className: string; text: string }) => (
   <div className="flex flex-col items-center justify-center relative">
-    <p className="text-2xl absolute -top-4 left-2 mx-10">{text}</p>
+    <div className="flex items-center text-2xl absolute -top-8 left-8 w-32 h-32">
+      <div className="text-center">{text}</div>
+    </div>
     <svg className={className} fill="#000000" height={200} width={200} viewBox="0 0 78.667 78.667">
       <path
         d="M9.49,73.833c-1.493,0-2.943-0.24-4.309-0.713l-3.113-1.077l2.392-2.265c3.165-2.997,3.964-6.455,4.016-9.046
